@@ -1,0 +1,38 @@
+
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="titulo">LISTAR TARJETA</h5>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Titular</th>
+            <th scope="col">Numero Tarjeta</th>
+            <th scope="col">Fecha expiración</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarjeta of listTarjetas; let i=index">
+            <th scope="row">{{i}}</th>
+            <td>{{tarjeta.titular}}</td>
+            <td>{{tarjeta.numeroTarjeta}}</td>
+            <td>{{tarjeta.fechaExpiracion}}</td>
+            <td><i (click)="editarTarjeta(tarjeta)" class="fa-regular fa-pen-to-square text-info"></i></td>
+            <td><i (click)="eliminarTarjeta(tarjeta.id)"class="fa-solid fa-trash text-danger"></i></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
